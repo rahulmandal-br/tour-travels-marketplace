@@ -1,0 +1,273 @@
+/* --- Premium Vibrant Teal & Gold Travel Theme Framework --- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+    --bg-light: #f0f7f7;        /* Soft Ocean Breeze */
+    --card-light: #ffffff;
+    --primary-color: #0b4f54;   /* Deep Tropical Teal */
+    --accent-gold: #e5a93b;    /* Warm Sandy Beach Gold */
+    --accent-orange: #ff7643;  /* Vibrant Sunset Orange */
+    --text-dark: #2c3e50;
+    --text-muted: #7f8c8d;
+    --border-color: #d1e5e6;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- Dynamic Glossy Navbar --- */
+header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+}
+
+.logo a {
+    color: var(--primary-color);
+    font-size: 26px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--accent-orange);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 28px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    padding: 6px 0;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* --- Cinematic Adventure Hero Interface --- */
+.hero {
+    background: linear-gradient(rgba(11, 79, 84, 0.8), rgba(11, 79, 84, 0.6)), 
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200') no-repeat center center/cover;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 24px;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 28px;
+    color: #f0f7f7;
+}
+
+/* --- Vivid Action Buttons --- */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-orange), #e65c26);
+    color: #ffffff;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(255, 118, 67, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 118, 67, 0.5);
+    background: linear-gradient(135deg, #e65c26, var(--accent-orange));
+}
+
+/* --- Main Layout System --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+/* --- Clean Grid System for Tour Packages --- */
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.package-card {
+    background-color: var(--card-light);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(11, 79, 84, 0.04);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.package-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(11, 79, 84, 0.1);
+    border-color: var(--accent-gold);
+}
+
+.package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.package-info {
+    padding: 20px;
+}
+
+.package-location {
+    color: var(--accent-gold);
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.package-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.package-price {
+    font-size: 22px;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.package-duration {
+    display: inline-block;
+    background: #eef7f7;
+    color: var(--primary-color);
+    border: 1px solid rgba(11, 79, 84, 0.15);
+    padding: 3px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* --- Elegant Form Infrastructure --- */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--card-light);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(11, 79, 84, 0.03);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: #fbfdfd;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-dark);
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 8px rgba(255, 118, 67, 0.2);
+    background: #ffffff;
+}
+
+/* --- About Card Modules --- */
+.about-box {
+    background: var(--card-light);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+}
+
+.about-box h3 {
+    color: var(--primary-color);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* --- Deep Ocean Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: #d1e5e6;
+    text-align: center;
+    padding: 24px;
+    margin-top: 60px;
+    font-size: 14px;
+}
