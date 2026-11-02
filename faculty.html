@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Package - Roamify</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">Roam<span>ify</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academics.html">Browse Tours</a></li>
+                <li><a href="faculty.html" class="active">Host a Tour</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">List Your Custom Travel Package</h2>
+        
+        <div class="form-container">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="tourTitle">Tour Itinerary Title *</label>
+                    <input type="text" id="tourTitle" required placeholder="e.g. Magical 5 Days Kerala Backwaters">
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destination / Location *</label>
+                    <input type="text" id="destination" required placeholder="e.g. Munnar & Alleppey, Kerala">
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration Metric *</label>
+                    <input type="text" id="duration" required placeholder="e.g. 5 Days / 4 Nights">
+                </div>
+                <div class="form-group">
+                    <label for="category">Travel Category *</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="beaches">Beach Holidays</option>
+                        <option value="mountains">Honeymoon / Hill Stations</option>
+                        <option value="adventure">Trekking & Adventure</option>
+                        <option value="cultural">Religious / Cultural Tours</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="price">Package Base Price (₹) *</label>
+                    <input type="number" id="price" required placeholder="e.g. 15500">
+                </div>
+                <div class="form-group">
+                    <label for="desc">Tour Summary & Inclusions</label>
+                    <textarea id="desc" rows="4" placeholder="Mention hotel rating, meals provided, cabs, and sightseeing items..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; border-radius:30px; cursor:pointer;">Publish Travel Package</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Roamify Travel Marketplace. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
